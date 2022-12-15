@@ -68,3 +68,6 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentLocation);
 search("Berlin");
+
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute("src", response.data.weather[0].description);
