@@ -37,6 +37,11 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function search(city) {
   let apiKey = "4c9b53e4f8f5eb00df5915bdca340605";
@@ -68,6 +73,3 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentLocation);
 search("Berlin");
-
-//let iconElement = document.querySelector("#icon");
-//iconElement.setAttribute("src", response.data.weather[0].description);
