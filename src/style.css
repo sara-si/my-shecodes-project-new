@@ -64,3 +64,13 @@ a:link {
 .search {
   margin-bottom: 20px;
 }
+
+.active {
+  color: rgb(32, 33, 36);
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: rgb(32, 33, 36);
+}
